@@ -131,6 +131,26 @@ foreach($images as $image) {
 </form>
 <h2>Username: <?php echo " ".$loggedInUser->username; ?></h2>
 <h2>Email: <?php echo " ".$loggedInUser->email; ?></h2>
+<?php
+
+  $sql123 = "SELECT * FROM send_request WHERE to_id='$loggedInUser->user_id'";
+  $result123 = mysqli_query($mysqli, $sql123);
+  while($rows = mysqli_fetch_assoc($result123)){
+    $sent = $rows['sent'];
+    $accepted = $rows['accepted'];
+    $naccepted = $rows['not_accepted'];
+    $prid = $rows['proj_id'];
+    $from = $rows['from_user'];
+    $_SESSION["prid"] = $prid;
+    $_SESSION["from"] = $from;
+    if($sent == '1' && $accepted == '0' && $naccepted == '0'){
+    echo "<h2 style='color: green;'>Notifications: Join Request from <b style='color: green;'>".$from."</b><br /><a href='acc.php'>   Accept</a><a style='color: red;' href='del.php'>     Delete</a></h2>";
+  }
+  else{
+    echo "<h2 style='color: green;'>Notifications: No New Request</h2>";
+  }
+  }
+?>
 </center>
  </div>
 

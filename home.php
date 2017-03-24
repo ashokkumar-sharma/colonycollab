@@ -44,8 +44,42 @@ $mysqli_result = mysqli_query($mysqli, $sql);
          form{
            margin-top: 20px;
          }
-         .row{
-           margin-left: 20px;
+         .title{
+           margin-left: 12px;
+           color:#031d74;
+           font-size: 35px;
+           font-weight: 800;
+       }
+             .des{
+               color:#315b9a;
+               margin-left: 15px;
+
+               font-size:18px
+           }
+             .tm{
+               margin-left: 15px;
+               color:#3c4869;
+               font-size:15px
+           }
+           .author{
+            color: #290587;
+             margin-left: 22px;
+
+             font-size:15px
+         }
+       a{
+         text-decoration: none;
+       }
+         .row1{
+
+           overflow: hidden;
+           margin-left: 49px;
+           border-radius: 8px;
+           display: block;
+           margin-top: 10px;
+           width: 92%;
+           height: auto;
+           background-color: #dadcf4;
          }
      </style>
  </head>
@@ -67,6 +101,8 @@ $mysqli_result = mysqli_query($mysqli, $sql);
  					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
  				</div>
  			</header>
+
+      	<section id="banner1">
         <?php
             while($rows = mysqli_fetch_assoc($mysqli_result)){
               $event_type = $rows['event_type'];
@@ -75,15 +111,21 @@ $mysqli_result = mysqli_query($mysqli, $sql);
               $description = $rows['description'];
               $team_limit   = $rows['team_limit'];
               $author = $rows['author'];
-            }
-        ?>
-      <div class="row">
-        <?php echo "<font class='title'>".$title."</font><br>";
+
+              if (strlen($description) > 80)
+                $description = substr($description, 0, 68) . '...';
+
+      echo "<a href='view_project.php?id=".$proj_id."'><div class='row1'>";
+              $_SESSION["proj_id"] = $proj_id;
+         echo "<font class='title'>".$title."</font><br />";
               echo "<font class='des'>".$description."</font><br />";
               echo "<font class='tm'>Max number of team members: ".$team_limit."</font><br />";
-              echo "<font class='author'>Created by : ".$author."</font><br />";?>
-      </div>
+              echo "<font class='author'>Created by : ".$author."</font><br />";
 
+      echo '</div></a>';
+    }
+      ?>
+    </sectionx>
  		<!-- Scripts -->
  			<script src="assets/js/jquery.min.js"></script>
  			<script src="assets/js/skel.min.js"></script>
