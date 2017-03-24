@@ -14,7 +14,7 @@ $mysqli_result = mysqli_query($mysqli, $sql);
  ?>
 <!DOCTYPE html>
 <head>
-    <title><?php echo $loggedInUser->username." - Rendezvous"; ?></title>
+    <title><?php echo $loggedInUser->username." - Colony"; ?></title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <style>
       #acc_p{
@@ -88,6 +88,7 @@ $mysqli_result = mysqli_query($mysqli, $sql);
           padding-bottom: -10px;
           margin-top: 30px;
         }
+
     </style>
 </head>
 <body>
@@ -96,7 +97,7 @@ $mysqli_result = mysqli_query($mysqli, $sql);
    <!-- Header -->
      <header id="header">
        <div class="inner">
-         <a href="index.html" class="logo">Rendezvous</a>
+         <a href="index.php" class="logo">Colony</a>
          <nav id="nav">
             <a href="home.php">Home</a>
             <a href="add_event.php">Add a event</a>
@@ -183,7 +184,31 @@ $mysqli_result = mysqli_query($mysqli, $sql);
               // }
 
         }
+        $new = "SELECT * FROM team_mem where proj_id='$id'";
+        $result = mysqli_query($mysqli, $new);
+        while($rows = mysqli_fetch_assoc($result)){
+          $projid = $rows['proj_id'];
+          $member = $rows['mem1'];
+
+        }
+        $new12 = "SELECT * FROM project where proj_id='$id'";
+        $result = mysqli_query($mysqli, $new);
+        while($rows = mysqli_fetch_assoc($result)){
+          $author = $rows['author'];
+
+        }
+        $_SESSION["proj_id"] = $projid;
+        $_SESSION["mem"] = $member;
+        $_SESSION["username"] = $loggedInUser->username;
+        if($member == $loggedInUser->username){
+        echo '<center><iframe src="cha/index.php" width=80% height="700px"></iframe></center>';
+      }
+      else{
+        echo "No access";
+      }
      ?>
+
+
 
    <!-- Scripts -->
      <script src="assets/js/jquery.min.js"></script>
@@ -191,5 +216,6 @@ $mysqli_result = mysqli_query($mysqli, $sql);
      <script src="assets/js/util.js"></script>
      <script src="assets/js/main.js"></script>
       <script src="assets/js/reg.js"></script>
+
 </body>
 </html>

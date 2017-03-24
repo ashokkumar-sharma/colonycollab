@@ -187,7 +187,7 @@ echo "
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Prowess</a>
+					<a href="index.php" class="logo">Colony</a>
 					<nav id="nav">
 						<a href="index.php">Home</a>
 						<a href="login.php">Login</a>

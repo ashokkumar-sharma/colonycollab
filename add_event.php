@@ -23,7 +23,7 @@ if($_POST['submit']){
  ?>
 <!DOCTYPE html>
 <head>
-    <title><?php echo $loggedInUser->username." - Rendezvous"; ?></title>
+    <title><?php echo $loggedInUser->username." - Colony"; ?></title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <style>
       #acc_p{
@@ -66,7 +66,7 @@ if($_POST['submit']){
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Rendezvous</a>
+					<a href="index.php" class="logo">Colony</a>
 					<nav id="nav">
             <a href="home.php">Home</a>
             <a href="add_event.php">Add a event</a>

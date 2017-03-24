@@ -135,7 +135,7 @@ echo "
 
 <html>
 	<head>
-		<title>Elements - Projection by TEMPLATED</title>
+		<title>Colony</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -178,7 +178,7 @@ echo "
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
+					<a href="index.php" class="logo"><strong>Colony</strong></a>
 					<nav id="nav">
              <a href="home.php">Home</a>
              <a href="add_event.php">Add a event</a>

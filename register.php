@@ -124,7 +124,7 @@ echo "
 ?>
 <!doctype html>
 <head>
-    <title>Login - Rendezvous</title>
+    <title>Login - Colony</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <style>
         #regbox{
@@ -161,7 +161,7 @@ echo "
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Rendezvous</a>
+					<a href="index.php" class="logo">Colony</a>
 					<nav id="nav">
 						<a href="index.php">Home</a>
 						<a href="login.php">Login</a>

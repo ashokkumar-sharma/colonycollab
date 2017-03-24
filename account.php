@@ -108,7 +108,7 @@ foreach($images as $image) {
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Rendezvous</a>
+					<a href="index.php" class="logo">Colony</a>
 					<nav id="nav">
             <a href="home.php">Home</a>
             <a href="add_event.php">Add a event</a>
