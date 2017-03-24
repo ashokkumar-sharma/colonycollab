@@ -33,19 +33,7 @@ if(count($errors) == 0) {
 	$successes[] = lang("ACCOUNT_ACTIVATION_COMPLETE");
 }
 
-require_once("models/header.php");
 
-echo "
-<body>
-<div id='wrapper'>
-<div id='top'><div id='logo'></div></div>
-<div id='content'>
-<h1>UserCake</h1>
-<h2>Activate Account</h2>
-
-<div id='left-nav'>";
-
-include("left-nav.php");
 
 echo "
 </div>

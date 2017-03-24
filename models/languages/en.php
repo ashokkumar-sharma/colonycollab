@@ -1,12 +1,4 @@
 <?php
-/*
-UserCake Version: 2.0.2
-http://usercake.com
-*/
-
-/*
-%m1% - Dymamic markers which are replaced at run time by the relevant index.
-*/
 
 $lang = array();
 
@@ -31,16 +23,16 @@ $lang = array_merge($lang,array(
 	"ACCOUNT_EMAIL_IN_USE"			=> "Email %m1% is already in use",
 	"ACCOUNT_LINK_ALREADY_SENT"		=> "An activation email has already been sent to this email address in the last %m1% hour(s)",
 	"ACCOUNT_NEW_ACTIVATION_SENT"		=> "We have emailed you a new activation link, please check your email",
-	"ACCOUNT_SPECIFY_NEW_PASSWORD"		=> "Please enter your new password",	
+	"ACCOUNT_SPECIFY_NEW_PASSWORD"		=> "Please enter your new password",
 	"ACCOUNT_SPECIFY_CONFIRM_PASSWORD"	=> "Please confirm your new password",
-	"ACCOUNT_NEW_PASSWORD_LENGTH"		=> "New password must be between %m1% and %m2% characters in length",	
-	"ACCOUNT_PASSWORD_INVALID"		=> "Current password doesn't match the one we have on record",	
+	"ACCOUNT_NEW_PASSWORD_LENGTH"		=> "New password must be between %m1% and %m2% characters in length",
+	"ACCOUNT_PASSWORD_INVALID"		=> "Current password doesn't match the one we have on record",
 	"ACCOUNT_DETAILS_UPDATED"		=> "Account details updated",
 	"ACCOUNT_ACTIVATION_MESSAGE"		=> "You will need to activate your account before you can login. Please follow the link below to activate your account. \n\n
-	%m1%activate-account.php?token=%m2%",							
+	%m1%activate-account.php?token=%m2%",
 	"ACCOUNT_ACTIVATION_COMPLETE"		=> "You have successfully activated your account. You can now login <a href=\"login.php\">here</a>.",
 	"ACCOUNT_REGISTRATION_COMPLETE_TYPE1"	=> "You have successfully registered. You can now login <a href=\"login.php\">here</a>.",
-	"ACCOUNT_REGISTRATION_COMPLETE_TYPE2"	=> "You have successfully registered. You will soon receive an activation email. 
+	"ACCOUNT_REGISTRATION_COMPLETE_TYPE2"	=> "You have successfully registered. You will soon receive an activation email.
 	You must activate your account before logging in.",
 	"ACCOUNT_PASSWORD_NOTHING_TO_UPDATE"	=> "You cannot update with the same password",
 	"ACCOUNT_PASSWORD_UPDATED"		=> "Account password updated",

@@ -1,9 +1,11 @@
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+require_once("models/config.php");
+if (!securePage($_SERVER['PHP_SELF'])){die();}
+	if(isUserLoggedIn()){ header("Location: account.php"); die();}
+ ?>
 <!DOCTYPE HTML>
-<!--
-	Projection by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+
 <html>
 	<head>
 		<title>Colony</title>

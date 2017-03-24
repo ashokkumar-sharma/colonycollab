@@ -1,8 +1,4 @@
 <?php
-/*
-UserCake Version: 2.0.2
-http://usercake.com
-*/
 
 require_once("models/config.php");
 if (!securePage($_SERVER['PHP_SELF'])){die();}
@@ -173,10 +169,6 @@ if(!empty($_POST))
 	}
 }
 
-//require_once("models/header.php");
-echo "";
-
-//include("left-nav.php");
 
 
 
@@ -257,7 +249,7 @@ echo resultBlock($errors,$successes);
             ?>
 
         </section>
-        
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

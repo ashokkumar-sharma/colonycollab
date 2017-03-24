@@ -5,20 +5,20 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 if(!isUserLoggedIn()) { header("Location: login.php"); die(); }
 
 if($_POST['submit']){
-
+    $event_type = $_POST['event_type'];
     $title = $_POST['title'];
     $des = $_POST['description'];
     $team = $_POST['team_limit'];
 
-        $sql = "INSERT INTO project (proj_id, title, description, team_limit, author)
-        VALUES (NULL, '$title', '$des', '$team', '$user')";
+        $sql = "INSERT INTO project (event_type, proj_id, title, description, team_limit, author)
+        VALUES ('$event_type', NULL, '$title', '$des', '$team', '$loggedInUser->username')";
 
-        if (mysqli_query($conn, $sql)) {
-            echo "New record created successfully";
+        if (mysqli_query($mysqli, $sql)) {
+            echo "";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
-    header("Location: home.php");
+     header("Location: home.php");
 }
  ?>
 <!DOCTYPE html>
@@ -79,8 +79,14 @@ if($_POST['submit']){
 				</div>
 			</header>
 
-      <center><h2>Fill out the following details: </h2><form method="post" action="index.php">
+      <center><h2>Fill out the following details: </h2><form method="post" action="add_event.php">
         <div class="6u$ 12u$(xsmall)">
+          <select name="event_type">
+              <option value="">Type of event</option>
+              <option value="Social">Social</option>
+              <option value="Professional">Professional</option>
+              <option value="Personal">Personal</option>
+          </select><br/>
           <input type="text" name="title" placeholder="Enter your title" /><hr />
           <textarea type="text" name="description" placeholder="des here"></textarea><br /><br />
           <select name="team_limit">

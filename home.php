@@ -3,6 +3,10 @@ error_reporting(E_ALL ^ E_NOTICE);
 require_once("models/config.php");
 if (!securePage($_SERVER['PHP_SELF'])){die();}
 if(!isUserLoggedIn()) { header("Location: login.php"); die(); }
+$sql="SELECT * FROM project";
+$mysqli_result = mysqli_query($mysqli, $sql);
+
+
  ?>
  <!DOCTYPE html>
  <head>
@@ -40,10 +44,8 @@ if(!isUserLoggedIn()) { header("Location: login.php"); die(); }
          form{
            margin-top: 20px;
          }
-         #ip{
-           width: 400px;
-           margin-top: 20px;
-           margin-bottom: 20px;
+         .row{
+           margin-left: 20px;
          }
      </style>
  </head>
@@ -65,8 +67,22 @@ if(!isUserLoggedIn()) { header("Location: login.php"); die(); }
  					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
  				</div>
  			</header>
-
-
+        <?php
+            while($rows = mysqli_fetch_assoc($mysqli_result)){
+              $event_type = $rows['event_type'];
+              $proj_id = $rows['proj_id'];
+              $title = $rows['title'];
+              $description = $rows['description'];
+              $team_limit   = $rows['team_limit'];
+              $author = $rows['author'];
+            }
+        ?>
+      <div class="row">
+        <?php echo "<font class='title'>".$title."</font><br>";
+              echo "<font class='des'>".$description."</font><br />";
+              echo "<font class='tm'>Max number of team members: ".$team_limit."</font><br />";
+              echo "<font class='author'>Created by : ".$author."</font><br />";?>
+      </div>
 
  		<!-- Scripts -->
  			<script src="assets/js/jquery.min.js"></script>

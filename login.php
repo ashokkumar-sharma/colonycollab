@@ -75,10 +75,7 @@ if(!empty($_POST))
 	}
 }
 
-//require_once("models/header.php");
 
-
-//include("left-nav.php");
 
 echo "";
 

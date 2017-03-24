@@ -1,14 +1,10 @@
 <?php
-/*
-UserCake Version: 2.0.2
-http://usercake.com
-*/
 
 class loggedInUser {
 	public $email = NULL;
 	public $hash_pw = NULL;
 	public $user_id = NULL;
-	
+
 	//Simple function to update the last sign in of a user
 	public function updateLastSignIn()
 	{
@@ -21,14 +17,14 @@ class loggedInUser {
 			id = ?");
 		$stmt->bind_param("ii", $time, $this->user_id);
 		$stmt->execute();
-		$stmt->close();	
+		$stmt->close();
 	}
-	
+
 	//Return the timestamp when the user registered
 	public function signupTimeStamp()
 	{
 		global $mysqli,$db_table_prefix;
-		
+
 		$stmt = $mysqli->prepare("SELECT sign_up_stamp
 			FROM ".$db_table_prefix."users
 			WHERE id = ?");
@@ -39,7 +35,7 @@ class loggedInUser {
 		$stmt->close();
 		return ($timestamp);
 	}
-	
+
 	//Update a users password
 	public function updatePassword($pass)
 	{
@@ -48,37 +44,37 @@ class loggedInUser {
 		$this->hash_pw = $secure_pass;
 		$stmt = $mysqli->prepare("UPDATE ".$db_table_prefix."users
 			SET
-			password = ? 
+			password = ?
 			WHERE
 			id = ?");
 		$stmt->bind_param("si", $secure_pass, $this->user_id);
 		$stmt->execute();
-		$stmt->close();	
+		$stmt->close();
 	}
-	
+
 	//Update a users email
 	public function updateEmail($email)
 	{
 		global $mysqli,$db_table_prefix;
 		$this->email = $email;
 		$stmt = $mysqli->prepare("UPDATE ".$db_table_prefix."users
-			SET 
+			SET
 			email = ?
 			WHERE
 			id = ?");
 		$stmt->bind_param("si", $email, $this->user_id);
 		$stmt->execute();
-		$stmt->close();	
+		$stmt->close();
 	}
-	
+
 	//Is a user has a permission
 	public function checkPermission($permission)
 	{
 		global $mysqli,$db_table_prefix,$master_account;
-		
+
 		//Grant access if master user
-		
-		$stmt = $mysqli->prepare("SELECT id 
+
+		$stmt = $mysqli->prepare("SELECT id
 			FROM ".$db_table_prefix."user_permission_matches
 			WHERE user_id = ?
 			AND permission_id = ?
@@ -100,20 +96,20 @@ class loggedInUser {
 			return true;
 		}
 		if ($this->user_id == $master_account){
-			return true;	
+			return true;
 		}
 		else
 		{
-			return false;	
+			return false;
 		}
 		$stmt->close();
 	}
-	
+
 	//Logout
 	public function userLogOut()
 	{
 		destroySession("userCakeUser");
-	}	
+	}
 }
 
 ?>
