@@ -1,2 +1,3 @@
 # colonycollab
-A social media platform wherein people can create events,join events, view all circles 
+A common portal where anyone can upload an event details which can be viewed by every user and the one's interested in the event can join the event. 
+The event creator and the users can communicate via chatbox.
