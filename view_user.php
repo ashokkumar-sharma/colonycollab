@@ -6,7 +6,7 @@ if(!isUserLoggedIn()) { header("Location: login.php"); die(); }
 $id = $_GET['id'];
 
 $user_id = $id;
-$sql="SELECT * FROM group_users WHERE proj_id='$proj_id'";
+$sql="SELECT * FROM group_users WHERE user_id='$id'";
 $mysqli_result = mysqli_query($mysqli, $sql);
  ?>
 <!DOCTYPE html>
@@ -103,6 +103,18 @@ $mysqli_result = mysqli_query($mysqli, $sql);
 
        <?php
 
+           while($rows = mysqli_fetch_assoc($mysqli_result)){
+                   echo $user_id ;
+
+                   $target_dir = "documents/".user_id."/";
+
+                   $dirname = $target_dir;
+                   $images = glob($dirname."*.jpg");
+
+                   foreach($images as $image) {
+                   echo '<center><img id="acc_p" src="'.$image.'" /></center><br />';
+                   $mail = $rows['email'];
+                   echo $mail;
 
      ?>
 

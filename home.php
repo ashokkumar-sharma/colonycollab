@@ -10,7 +10,7 @@ $mysqli_result = mysqli_query($mysqli, $sql);
  ?>
  <!DOCTYPE html>
  <head>
-     <title><?php echo $loggedInUser->username." - Colony"; ?></title>
+     <title><?php echo $loggedInUser->username." - ColonyCollab"; ?></title>
      <link rel="stylesheet" type="text/css" href="assets/css/main.css">
      <style>
        #acc_p{
@@ -89,7 +89,7 @@ $mysqli_result = mysqli_query($mysqli, $sql);
  		<!-- Header -->
  			<header id="header">
  				<div class="inner">
- 					<a href="index.php" class="logo">Colony</a>
+ 					<a href="index.php" class="logo">ColonyCollab</a>
  					<nav id="nav">
              <a href="home.php">Home</a>
              <a href="add_event.php">Add a event</a>

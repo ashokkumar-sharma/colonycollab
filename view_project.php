@@ -192,15 +192,15 @@ $mysqli_result = mysqli_query($mysqli, $sql);
 
         }
         $new12 = "SELECT * FROM project where proj_id='$id'";
-        $result = mysqli_query($mysqli, $new);
+        $result = mysqli_query($mysqli, $new12);
         while($rows = mysqli_fetch_assoc($result)){
-          $author = $rows['author'];
+          $author2 = $rows['author'];
 
         }
         $_SESSION["proj_id"] = $projid;
         $_SESSION["mem"] = $member;
         $_SESSION["username"] = $loggedInUser->username;
-        if($member == $loggedInUser->username){
+        if($member == $loggedInUser->username || $author2 == $loggedInUser->username){
         echo '<center><iframe src="cha/index.php" width=80% height="700px"></iframe></center>';
       }
       else{

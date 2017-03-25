@@ -153,7 +153,7 @@ echo "
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.php" class="logo"><strong>Colony</strong></a>
+					<a href="index.php" class="logo"><strong>ColonyCollab</strong></a>
 					<nav id="nav">
 						<a href="index.html">Home</a>
 						<a href="login.php">Login</a>

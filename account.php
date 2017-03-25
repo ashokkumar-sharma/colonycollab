@@ -61,7 +61,7 @@ foreach($images as $image) {
 ?>
 <!DOCTYPE html>
 <head>
-    <title><?php echo $loggedInUser->username." - Rendezvous"; ?></title>
+    <title><?php echo $loggedInUser->username." - ColonyCollab"; ?></title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <style>
       #acc_p{

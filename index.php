@@ -8,7 +8,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 
 <html>
 	<head>
-		<title>Colony</title>
+		<title>Colony collab</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,7 +18,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo"><strong>Colony</strong></a>
+					<a href="index.php" class="logo"><strong>ColonyCollab</strong></a>
 					<nav id="nav">
 						<a href="index.php">Home</a>
 						<a href="login.php">Login</a>
@@ -32,33 +32,33 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 			<section id="banner">
 				<div class="inner">
 					<header>
-						<h1>Welcome to Colony</h1>
+						<h1>Welcome to ColonyCollab</h1>
 					</header>
-
+COLLABORATE AND COLONOLISE:Create an Event And get the Best Inividuals From Us.<br>
 					<div class="flex ">
 
 						<div>
 							<span class="icon fa-car"></span>
-							<h3>Aliquam</h3>
-							<p>Suspendisse amet ullamco</p>
+							<h3>Groups to same destination</h3>
+
 						</div>
 
 						<div>
 							<span class="icon fa-camera"></span>
-							<h3>Elementum</h3>
-							<p>Class aptent taciti ad litora</p>
+							<h3>Cast for Shows</h3>
+
 						</div>
 
 						<div>
 							<span class="icon fa-bug"></span>
-							<h3>Ultrices</h3>
-							<p>Nulla vitae mauris non felis</p>
+							<h3>Team For any Project</h3>
+
 						</div>
 
 					</div>
 
 					<footer>
-						<a href="#" class="button">Get Started</a>
+						<a href="login.php" class="button">Get Started Log in Now!!</a>
 					</footer>
 				</div>
 			</section>
@@ -70,63 +70,41 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 					<div class="flex flex-2">
 						<article>
 							<div class="image round">
-								<img src="images/pic01.jpg" alt="Pic 01" />
+								<img src="images/team.jpg" alt="Pic 01" height="150"width="150"/>
 							</div>
 							<header>
-								<h3>Lorem ipsum<br /> dolor amet nullam</h3>
+								<h3>Want some participation ?</h3>
 							</header>
-							<p>Morbi in sem quis dui placerat ornare. Pellentesquenisi<br />euismod in, pharetra a, ultricies in diam sed arcu. Cras<br />consequat  egestas augue vulputate.</p>
-							<footer>
-								<a href="#" class="button">Learn More</a>
-							</footer>
+							<p>Upload your Project details and make it availabe to the most Efficient ones.</p>
+
 						</article>
 						<article>
 							<div class="image round">
 								<img src="images/pic02.jpg" alt="Pic 02" />
 							</div>
 							<header>
-								<h3>Sed feugiat<br /> tempus adipicsing</h3>
+								<h3>Want to participate ?</h3>
 							</header>
-							<p>Pellentesque fermentum dolor. Aliquam quam lectus<br />facilisis auctor, ultrices ut, elementum vulputate, nunc<br /> blandit ellenste egestagus commodo.</p>
-							<footer>
-								<a href="#" class="button">Learn More</a>
-							</footer>
+							<p>Surf over the avilable projects and select the best one based on your interests.</p>
 						</article>
 					</div>
 				</div>
 			</section>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
+							<div class="inner">
+								<div class="flex">
+									<div class="copyright">
+										&copy; ASAP.
+									</div>
+									<ul class="icons">
+										<li><a href="https://www.facebook.com/ashokkumar.sharma/92372" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="https://twitter.com/SinghAgrim" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.linkedin.com/in/shivam-shukla-b83b3468/" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
 
-					<h3>Get in touch</h3>
+									</ul>
+								</div>
+							</div>
 
-					<form action="#" method="post">
-
-						<div class="field half first">
-							<label for="name">Name</label>
-							<input name="name" id="name" type="text" placeholder="Name">
-						</div>
-						<div class="field half">
-							<label for="email">Email</label>
-							<input name="email" id="email" type="email" placeholder="Email">
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-						</div>
-						<ul class="actions">
-							<li><input value="Send Message" class="button alt" type="submit"></li>
-						</ul>
-					</form>
-
-					<div class="copyright">
-						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-					</div>
-
-				</div>
-			</footer>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
